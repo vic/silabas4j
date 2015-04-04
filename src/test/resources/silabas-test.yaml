@@ -1,3 +1,18 @@
 ---
 árbol:
-  syllables: [ ár , bol ]
+  syllables:
+    - ár
+    - bol
+
+palabra:
+  syllables:
+    - pa
+    - la
+    - bra
+
+estocólmo:
+  syllables:
+    - es
+    - to
+    - cól
+    - mo
