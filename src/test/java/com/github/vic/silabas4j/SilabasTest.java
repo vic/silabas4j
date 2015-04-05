@@ -1,22 +1,19 @@
 package com.github.vic.silabas4j;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.yaml.snakeyaml.Yaml;
 
-import static org.junit.Assert.*;
-
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Map;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static org.junit.Assert.assertArrayEquals;
 
 @RunWith(Parameterized.class)
 public class SilabasTest {
