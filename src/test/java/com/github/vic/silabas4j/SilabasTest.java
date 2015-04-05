@@ -36,12 +36,12 @@ public class SilabasTest {
 
 
     @Parameterized.Parameters(name = "{0}")
-    public static Collection<Object[]> data() throws Exception {
+    public static Iterable<Object[]> data() throws Exception {
         Yaml yaml = new Yaml();
         InputStream resourceAsStream = SilabasTest.class.getClassLoader().getResourceAsStream(YAML_RESOURCE);
         Map<String,Map<String,Object>> testCases = yaml.loadAs(resourceAsStream, Map.class);
-        Object[] objects = testCases.entrySet().stream().map(SilabasTest::entryData).toArray();
-        return Arrays.<Object[]>asList(objects);
+        Stream<Object[]> stream = testCases.entrySet().stream().map(SilabasTest::entryData);
+        return stream.collect(Collectors.toList());
     }
 
     private static Object[] entryData(Map.Entry<String, Map<String,Object>> entry) {

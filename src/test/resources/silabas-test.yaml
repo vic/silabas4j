@@ -4,6 +4,7 @@ vate:
     - va
     - te
 
+# CORRECT?
 compto:
   syllables:
     - com
@@ -109,6 +110,7 @@ tendedero:
     - de
     - ro
 
+# CORRECT? a-bu-ha-do
 Abuhado:
   syllables:
     - A
@@ -283,6 +285,6 @@ Vieira:
 # FAILS
 desyugar:
   syllables:
-    - des
-    - yu
+    - de
+    - syu
     - gar
