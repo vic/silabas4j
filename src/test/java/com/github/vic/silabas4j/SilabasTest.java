@@ -4,21 +4,23 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.yaml.snakeyaml.Yaml;
 
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import com.google.gson.Gson;
+
 import static org.junit.Assert.assertArrayEquals;
 
 @RunWith(Parameterized.class)
 public class SilabasTest {
 
-    private static final String YAML_RESOURCE = "silabas-test.yaml";
+    private static final String YAML_RESOURCE = "silabas_test.json";
     private static final String[] WORD_EXPECTATIONS = {
             "syllables"
     };
@@ -34,9 +36,9 @@ public class SilabasTest {
 
     @Parameterized.Parameters(name = "{0}")
     public static Iterable<Object[]> data() throws Exception {
-        Yaml yaml = new Yaml();
+        Gson gson = new Gson();
         InputStream resourceAsStream = SilabasTest.class.getClassLoader().getResourceAsStream(YAML_RESOURCE);
-        Map<String,Map<String,Object>> testCases = yaml.loadAs(resourceAsStream, Map.class);
+        Map<String,Map<String,Object>> testCases =  gson.fromJson(new InputStreamReader(resourceAsStream), Map.class);
         Stream<Object[]> stream = testCases.entrySet().stream().map(SilabasTest::entryData);
         return stream.collect(Collectors.toList());
     }
