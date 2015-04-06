@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/vic/silabas4j.svg)](https://travis-ci.org/vic/silabas4j)
+
 # Silabas
 
 Syllabe separator for spanish words.
