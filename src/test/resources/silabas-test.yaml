@@ -4,7 +4,7 @@ vate:
     - va
     - te
 
-# CORRECT?
+# CORRECT? // Yes, porque 'p' es muda aquí.
 compto:
   syllables:
     - com
@@ -110,7 +110,7 @@ tendedero:
     - de
     - ro
 
-# CORRECT? a-bu-ha-do
+# CORRECT? a-bu-ha-do // Resulta que sí es correcto.
 Abuhado:
   syllables:
     - A
@@ -282,9 +282,10 @@ Vieira:
     - Viei
     - ra
 
-# FAILS
+# FAILS // CORRECT, porque parece que aunque puede equivaler a un triptongo (iiu),
+#la yé también tiene un valor consonántico.
 desyugar:
   syllables:
-    - de
-    - syu
+    - des
+    - yu
     - gar
