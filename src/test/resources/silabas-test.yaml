@@ -109,7 +109,6 @@ tendedero:
     - de
     - ro
 
-# CORRECT? a-bu-ha-do // Resulta que sí es correcto.
 Abuhado:
   syllables:
     - A
@@ -281,8 +280,8 @@ Vieira:
     - Viei
     - ra
 
-# FAILS // CORRECT, porque parece que aunque puede equivaler a un triptongo (iiu),
-#la yé también tiene un valor consonántico.
+# correcto porque parece que aunque puede equivaler a un triptongo (iiu),
+# la yé también tiene un valor consonántico.
 desyugar:
   syllables:
     - des
